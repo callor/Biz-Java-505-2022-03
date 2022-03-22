@@ -17,7 +17,15 @@ public class HelloKorea {
 	 * 
 	 */
 	public static void main(String[] args) {
-		
+		System.out.println("반갑습니다");
+		System.out.println(30 + 40);
+		System.out.println(30 * 40);
+		System.out.println(40 - 30);
+		System.out.println(40 / 2);
+		System.out.println(30 + 40 * 40 / 2 - 100);
 	}
-
 }
+
+
+
+
