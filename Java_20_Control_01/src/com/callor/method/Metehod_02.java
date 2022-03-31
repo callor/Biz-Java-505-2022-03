@@ -14,6 +14,7 @@ public class Metehod_02 {
 		long longNum1 = longNum();
 		longNum1 = 30;
 		longNum1 = 300_000_000_000L;
+		
 		float fNum1 = floatNum();
 		fNum1 = 0.0f;
 		
