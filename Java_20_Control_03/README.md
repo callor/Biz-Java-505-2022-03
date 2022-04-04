@@ -24,10 +24,10 @@ public void run() {
 
 ## return 명령
 * method 를 끝내는 명령이다
-* return type void 인 경우는 return 명령문 단독으로 사용된다.
-* return type void 인 경우 특별한 때가 아니면 return을 사용하지 않아도 된다.
+* return type void 인 경우는 ```return``` 명령문 단독으로 사용된다.
+* return type void 인 경우 특별한 때가 아니면 ```return```을 사용하지 않아도 된다.
 * return type void 이외의 경우 반드시 return 명령이 있어야 하고, return type 과 같은 데이터를 포함해야 한다
-* 처음 method 를 선언할때 숫자인 경우는 return 0;, 문자열인 경우는 return ""; 또는 return null; 을 사용한다. boolean 인 경우는 보통 return false 를 사용한다.
+* 처음 method 를 선언할때 숫자인 경우는 ```return 0;```, 문자열인 경우는 ```return ""```; 또는 ```return null;``` 을 사용한다. boolean 인 경우는 보통 ```return false``` 를 사용한다.
 
 
 
