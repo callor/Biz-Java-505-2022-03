@@ -43,6 +43,12 @@ public class Method_04 {
 		// 인스턴스를 초기화( new ServiceV2() ) 하였다
 		ServiceV2 sV3 = new ServiceV2();
 		
+		// ServiceV2 class type 의 객체(object)를 선언했다
+		ServiceV2 sV4;
+		// 초기화(new ServiceV2() )를 실행하여 
+		//  sV4 가 인스턴스가 되었다
+		sV4 = new ServiceV2();
+		
 		
 		
 		
