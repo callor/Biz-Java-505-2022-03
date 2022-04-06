@@ -14,9 +14,14 @@ public class ServiceV1 {
 		int intEng = 80;
 		int intMath = 70;
 		
+		int intSum = 0;
+		intSum = intKor + intEng + intMath;
 		
+		intSum = intKor;
+		intSum += intEng;
+		intSum += intMath;
 		
-		return 0;
+		return intSum;
 	}
 	
 	/*
@@ -27,6 +32,25 @@ public class ServiceV1 {
 	 * 		"호출한 곳에" 어떤 것도 알리지 않는다
 	 */
 	public void scorePrint() {
+		
+		int intKor = 90;
+		int intEng = 80;
+		int intMath = 70;
+		
+		System.out.println("========================");
+		System.out.println("철수의 성적표");
+		System.out.println("------------------------");
+		System.out.println("국어 : " + intKor);
+		System.out.println("영어 : " + intEng);
+		System.out.println("수학 : " + intMath);
+		System.out.println("------------------------");
+		
+		int intSum = intKor;
+		intSum += intEng;
+		intSum += intMath;
+		System.out.println("총점 : " + intSum);
+		System.out.println("=========================");
+		
 		
 	}
 
