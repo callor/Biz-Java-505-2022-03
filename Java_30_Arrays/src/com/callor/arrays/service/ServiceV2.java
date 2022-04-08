@@ -2,6 +2,10 @@ package com.callor.arrays.service;
 
 public class ServiceV2 {
 	
+	public ServiceV2() {
+		
+	}
+	
 	public int scoreKorSum() {
 		
 		// int[] intKor : intKor 이름으로 정수형배열 선언
