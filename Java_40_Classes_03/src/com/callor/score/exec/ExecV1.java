@@ -7,10 +7,16 @@ public class ExecV1 {
 	
 	public static void main(String[] args) {
 		
+		int intNum = 0;
+		System.out.println(intNum);
+		
 		// ScoreVO 클래스를 사용하여 3개의 객체를 생성
 		ScoreVO stNo1 = new ScoreVO();
 		ScoreVO stNo2 = new ScoreVO();
 		ScoreVO stNo3 = new ScoreVO();
+		
+		System.out.println(stNo1.stName);
+		System.out.println(stNo1.intKor);
 		
 		stNo1.stName = "홍길동";
 		stNo2.stName = "이몽룡";
