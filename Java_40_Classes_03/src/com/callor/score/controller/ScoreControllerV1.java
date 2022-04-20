@@ -11,7 +11,5 @@ public class ScoreControllerV1 {
 		scService.makeScore();
 		scService.printScore();
 		
-		
 	}
-
 }
