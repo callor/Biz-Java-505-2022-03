@@ -2,8 +2,15 @@ package com.callor.score.service;
 
 import com.callor.score.domain.ScoreV2VO;
 import com.callor.score.utils.Line;
+import com.callor.score.utils.Score;
 
 public class ScoreServiceV3 extends ScoreServiceV1{
+	
+	protected final static int I_KOR = 0;
+	protected final static int I_ENG = 1;
+	protected final static int I_MATH = 2;
+	protected final static int I_SUM = 3;
+	protected final static int I_AVG = 4;
 	
 	public ScoreServiceV3() {
 		this(10);
@@ -27,12 +34,8 @@ public class ScoreServiceV3 extends ScoreServiceV1{
 	}
 	
 	public void printScore() {
-		
-		int korTotal = 0;
-		int engTotal = 0;
-		int mathTotal = 0;
-		int sumTotal = 0;
-		float avgResult = 0;
+
+		float[] totals = new float[5];
 		
 		System.out.println(Line.dLine(50));
 		System.out.println("빛나고교 성적표 v1");
@@ -47,24 +50,23 @@ public class ScoreServiceV3 extends ScoreServiceV1{
 			System.out.printf("%6d\t",scores[i].getIntSum() );
 			System.out.printf("%4.2f\n",scores[i].getfAvg());
 			
-			korTotal += scores[i].getIntKor();
-			engTotal += scores[i].getIntEng();
-			mathTotal += scores[i].getIntMath();
-			sumTotal += scores[i].getIntSum();
+			totals[I_KOR] += scores[i].getIntKor();
+			totals[I_ENG] += scores[i].getIntEng();
+			totals[I_MATH] += scores[i].getIntMath();
+			totals[I_SUM] += scores[i].getIntSum();
 
 			/*
 			 * 평균계산 주의
 			 */
-			avgResult += scores[i].getfAvg();
-			
+			totals[I_AVG] += scores[i].getfAvg();
 		}
 		System.out.println(Line.sLine(50));
 		System.out.printf("%-3s\t","총점");
-		System.out.printf("%4d\t",korTotal);
-		System.out.printf("%4d\t",engTotal);
-		System.out.printf("%4d\t",mathTotal);
-		System.out.printf("%6d\t",sumTotal);
-		System.out.printf("%4.2f\n",avgResult / scores.length);
+		System.out.printf("%4.0f\t",totals[Score.I_KOR]);
+		System.out.printf("%4.0f\t",totals[Score.I_ENG]);
+		System.out.printf("%4.0f\t",totals[Score.I_MATH]);
+		System.out.printf("%6d\t",totals[Score.I_SUM]);
+		System.out.printf("%4.2f\n",totals[Score.I_AVG] / (float)scores.length);
 		System.out.println(Line.dLine(50));
 		
 	}
