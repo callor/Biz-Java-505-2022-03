@@ -59,6 +59,13 @@ public class StudentServiceImplV1 implements StudentService {
 			System.out.println("학과:" + stInfos[4]);
 			System.out.println("주소:" + stInfos[5]);
 			
+			StudentVO stVO = new StudentVO();
+			stVO.setStNum(stInfos[0]);
+			stVO.setStName(stInfos[1]);
+			stVO.setStGrade(stInfos[2]);
+			stVO.setStDept(stInfos[4]);
+			stVO.setStAddr(stInfos[5]);
+			
 		}
 	}
 
