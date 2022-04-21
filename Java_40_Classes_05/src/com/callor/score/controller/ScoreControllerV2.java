@@ -1,12 +1,24 @@
 package com.callor.score.controller;
 
+import com.callor.score.domain.StudentVO;
 import com.callor.score.service.ScoreService;
+import com.callor.score.service.StudentService;
 import com.callor.score.service.impl.ScoreServiceImplV1;
+import com.callor.score.service.impl.StudentServiceImplV1;
 
 public class ScoreControllerV2 {
 	
 	public static void main(String[] args) {
 		
+		String stFile = "src/com/callor/score/data/student.txt";
+		int stLength = 50;
+		StudentService stService 
+				= new StudentServiceImplV1(stFile, stLength);
+		stService.loadStudent();
+		StudentVO[] stList = stService.getStudents();
+		StudentVO stNo1 = stService.findByNum("0001");
+		
+	
 		/*
 		 * ScoreServiceImplV1 클래스를 사용하여 객체를 생성하고
 		 * method를 호출하여 기능을 수행하려고 한다.
