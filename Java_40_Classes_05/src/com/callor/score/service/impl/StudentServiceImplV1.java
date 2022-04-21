@@ -10,17 +10,13 @@ import com.callor.score.service.StudentService;
 
 public class StudentServiceImplV1 implements StudentService {
 
-	private StudentVO[] stVO;
-	private String stFile;
-	
-//	private StudentServiceImplV1() {
-//		// TODO Auto-generated constructor stub
-//	}
+	private final StudentVO[] stList;
+	private final String stFile;
 	public StudentServiceImplV1(String stFile, int length) {
 		this.stFile = stFile;
-		this.stVO = new StudentVO[length];
-		for(int i = 0 ; i < this.stVO.length ; i++) {
-			this.stVO[i] = new StudentVO();
+		this.stList = new StudentVO[length];
+		for(int i = 0 ; i < this.stList.length ; i++) {
+			this.stList[i] = new StudentVO();
 		}
 	}
 	
@@ -48,6 +44,7 @@ public class StudentServiceImplV1 implements StudentService {
 			System.out.println(stLine);
 		}
 		*/
+		int index = 0 ;
 		while(scan.hasNext()) {
 			String stLine = scan.nextLine();
 			System.out.println(stLine);
@@ -66,19 +63,45 @@ public class StudentServiceImplV1 implements StudentService {
 			stVO.setStDept(stInfos[4]);
 			stVO.setStAddr(stInfos[5]);
 			
+			stList[index++] = stVO;
 		}
 	}
 
 	@Override
 	public StudentVO[] getStudents() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return this.stList;
 	}
 
 	@Override
 	public StudentVO findByNum(String stNum) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+	@Override
+	public StudentVO[] sortByNum() {
+		// TODO 학생 리스트를 학번 순으로 정렬하기
+		for(int i = 0 ; i < stList.length ; i++) {
+			for(int j = i ; j < stList.length ; j++) {
+				int stNo1 = Integer.valueOf(stList[i].getStNum());
+				int stNo2 = Integer.valueOf(stList[j].getStNum());
+				if(stNo1 > stNo2) {
+					StudentVO _temp = stList[i];
+					stList[i] = stList[j];
+					stList[j] = _temp;
+				}
+			}
+		}
+		this.printStudentList();
+		return stList;
+	}
+	
+	private void printStudentList() {
+		for(StudentVO vo : stList) {
+			System.out.println(vo);
+		}
 	}
 
 }

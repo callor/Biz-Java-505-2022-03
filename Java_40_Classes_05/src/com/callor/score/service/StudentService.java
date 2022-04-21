@@ -15,5 +15,6 @@ public interface StudentService {
 	// stNum 학번을 학생데이터들에서 찾아서(findByNum)
 	// 학생 데이터를 return 하기
 	public StudentVO findByNum(String stNum);
+	public StudentVO[] sortByNum();
 
 }

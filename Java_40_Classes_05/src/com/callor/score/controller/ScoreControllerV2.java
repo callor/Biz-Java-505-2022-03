@@ -17,7 +17,6 @@ public class ScoreControllerV2 {
 		stService.loadStudent();
 		StudentVO[] stList = stService.getStudents();
 		StudentVO stNo1 = stService.findByNum("0001");
-		
 	
 		/*
 		 * ScoreServiceImplV1 클래스를 사용하여 객체를 생성하고
@@ -39,8 +38,6 @@ public class ScoreControllerV2 {
 		ScoreService scService = new ScoreServiceImplV1();
 		scService.makeScore();
 		scService.printScore();
-		
-		
 		
 	}
 
