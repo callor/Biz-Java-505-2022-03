@@ -10,8 +10,8 @@ import com.callor.score.service.StudentService;
 
 public class StudentServiceImplV1 implements StudentService {
 
-	private final StudentVO[] stList;
-	private final String stFile;
+	private StudentVO[] stList;
+	private String stFile;
 	public StudentServiceImplV1(String stFile, int length) {
 		this.stFile = stFile;
 		this.stList = new StudentVO[length];
@@ -44,7 +44,7 @@ public class StudentServiceImplV1 implements StudentService {
 			System.out.println(stLine);
 		}
 		*/
-		int index = 0 ;
+		int index = 0; // stList 의 요소를 가리키는 값
 		while(scan.hasNext()) {
 			String stLine = scan.nextLine();
 			System.out.println(stLine);
@@ -64,44 +64,33 @@ public class StudentServiceImplV1 implements StudentService {
 			stVO.setStAddr(stInfos[5]);
 			
 			stList[index++] = stVO;
+			
+		} // end while 여기를 지나면 stList 에 모든 데이터가 담겨 있을 것이다
+		this.printStudents();
+		
+	} // end loadStudent
+	
+	// V1 에서 stList 에 담긴 데이터들을 확인하기 위하여
+	// 내부용으로 만든 method
+	private void printStudents() {
+		for(int i = 0 ; i < stList.length ; i++) {
+			System.out.println(stList[i].toString());
+		}
+		for(StudentVO vo : stList) {
+			System.out.println(vo.toString());
 		}
 	}
 
 	@Override
 	public StudentVO[] getStudents() {
 
-		return this.stList;
+		return null;
 	}
 
 	@Override
 	public StudentVO findByNum(String stNum) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-
-	@Override
-	public StudentVO[] sortByNum() {
-		// TODO 학생 리스트를 학번 순으로 정렬하기
-		for(int i = 0 ; i < stList.length ; i++) {
-			for(int j = i ; j < stList.length ; j++) {
-				int stNo1 = Integer.valueOf(stList[i].getStNum());
-				int stNo2 = Integer.valueOf(stList[j].getStNum());
-				if(stNo1 > stNo2) {
-					StudentVO _temp = stList[i];
-					stList[i] = stList[j];
-					stList[j] = _temp;
-				}
-			}
-		}
-		this.printStudentList();
-		return stList;
-	}
-	
-	private void printStudentList() {
-		for(StudentVO vo : stList) {
-			System.out.println(vo);
-		}
 	}
 
 }
