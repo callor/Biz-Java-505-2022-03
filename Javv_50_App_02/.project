@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Java_00_Hello</name>
+	<name>Javv_50_App_02</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,14 +10,8 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.wst.common.project.facet.core.builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
