@@ -36,7 +36,16 @@ public class StudentVO {
 	public StudentVO() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
+	/**
+	 * 
+	 * @param stNum
+	 * @param stName
+	 * @param intGrade
+	 * @param stDept
+	 * @param stAddr
+	 * @param stTel
+	 */
 	public StudentVO(String stNum, String stName, int intGrade, String stDept, String stAddr, String stTel) {
 		super();
 		this.stNum = stNum;
