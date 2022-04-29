@@ -1,6 +1,6 @@
 package com.callor.app.exec;
 
-public class PamentEx2 {
+public class PaymentEx2 {
 	
 	public static void main(String[] args) {
 		

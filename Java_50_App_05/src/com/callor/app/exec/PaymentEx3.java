@@ -1,6 +1,6 @@
 package com.callor.app.exec;
 
-public class PaymemtEx3 {
+public class PaymentEx3 {
 
 	public static void main(String[] args) {
 		int pay = 3_829_980;
