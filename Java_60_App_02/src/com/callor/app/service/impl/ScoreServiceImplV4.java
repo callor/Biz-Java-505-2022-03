@@ -34,8 +34,6 @@ public class ScoreServiceImplV4 extends ScoreServiceImplV3 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	

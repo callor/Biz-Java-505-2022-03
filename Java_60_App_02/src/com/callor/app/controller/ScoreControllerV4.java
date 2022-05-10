@@ -9,7 +9,6 @@ public class ScoreControllerV4 {
 		ScoreService scService = new ScoreServiceImplV4();
 		scService.inputScore();
 		scService.saveScore();
-		
 	}
 
 }
