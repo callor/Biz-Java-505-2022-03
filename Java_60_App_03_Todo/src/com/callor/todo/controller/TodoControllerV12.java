@@ -46,7 +46,7 @@ public class TodoControllerV12 {
 						System.out.println("숫자로만 선택하세요");
 						continue;
 					}
-					if(num == -1) return;
+					if(num == -1) break;
 					toService.compTodo(num);
 				}
 			} // end if
