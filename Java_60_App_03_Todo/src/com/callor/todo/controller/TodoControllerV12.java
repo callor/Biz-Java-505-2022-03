@@ -7,14 +7,14 @@ import com.callor.todo.model.TodoVO;
 import com.callor.todo.service.InputService;
 import com.callor.todo.service.TodoService;
 import com.callor.todo.service.impl.InputServiceImplV2;
-import com.callor.todo.service.impl.TodoServiceImplV1;
+import com.callor.todo.service.impl.TodoServiceImplV2;
 import com.callor.utils.Line;
 
 public class TodoControllerV12 {
 	
 	public static void main(String[] args) throws IOException {
 		
-		TodoService toService = new TodoServiceImplV1();
+		TodoService toService = new TodoServiceImplV2();
 		InputService inService = new InputServiceImplV2();
 		
 		while(true) {
