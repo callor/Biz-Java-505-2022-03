@@ -112,11 +112,11 @@ public class TodoServiceImplV1 implements TodoService{
 		out = new PrintWriter(writer);
 		
 		for(TodoVO vo : todoList) {
-			out.printf("%s:", vo.getTKey());
-			out.printf("%s:", vo.getSdate());
-			out.printf("%s:",vo.getStime());
-			out.printf("%s:",vo.getEdate());
-			out.printf("%s:",vo.getEtime());
+			out.printf("%s,", vo.getTKey());
+			out.printf("%s,", vo.getSdate());
+			out.printf("%s,",vo.getStime());
+			out.printf("%s,",vo.getEdate());
+			out.printf("%s,",vo.getEtime());
 			out.printf("%s\n",vo.getTContent());
 		}
 		// buffer 에 남아있는 데이터를 강제로 파일에 기록
