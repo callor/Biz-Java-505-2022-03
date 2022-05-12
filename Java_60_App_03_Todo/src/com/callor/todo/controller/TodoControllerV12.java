@@ -1,5 +1,6 @@
 package com.callor.todo.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.callor.todo.model.TodoVO;
@@ -11,7 +12,7 @@ import com.callor.utils.Line;
 
 public class TodoControllerV12 {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		TodoService toService = new TodoServiceImplV1();
 		InputService inService = new InputServiceImplV2();
@@ -52,7 +53,9 @@ public class TodoControllerV12 {
 					toService.compTodo(num);
 					
 				}
-			} // end if
+			} else if(mainMenu == 5) {
+				toService.saveTodo(null);
+			}// end if
 		} // end while
 	} // end main
 	

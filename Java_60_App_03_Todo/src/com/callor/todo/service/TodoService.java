@@ -1,5 +1,6 @@
 package com.callor.todo.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.callor.todo.model.TodoVO;
@@ -22,7 +23,7 @@ public interface TodoService {
 	public void compTodo(Integer num);
 	
 	// TodoList 내용을 파일에 저장하기
-	public void saveTodo(String fileName);
+	public void saveTodo(String fileName) throws IOException;
 	
 
 }
