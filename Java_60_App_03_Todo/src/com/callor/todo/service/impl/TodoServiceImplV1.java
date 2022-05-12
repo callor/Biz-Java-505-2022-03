@@ -1,10 +1,16 @@
 package com.callor.todo.service.impl;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+
+import javax.swing.text.DateFormatter;
 
 import com.callor.todo.model.TodoVO;
 import com.callor.todo.service.TodoService;
@@ -104,7 +110,36 @@ public class TodoServiceImplV1 implements TodoService{
 	 */
 	@Override
 	public void compTodo(Integer num) {
-
+		int index = num - 1;
+		
+		// java 1.8 부터 사용하는 새로운 날짜 시간 관련 클래스
+		// Date, Calendar 클래스의 날짜와 관련된 많은 이슈때문에
+		// 새롭게 디자인되고 만들어진 클래스이다
+		// 객체를 새로 생성하는 것이 아니고 
+		// now() 라는 static 메서드를 호출하여 가져다 쓰는 구조다 
+		// 현재 시점의 날짜와 시간
+		LocalDateTime local = LocalDateTime.now();
+		LocalDate localDate = LocalDate.now();
+		LocalTime localTime = LocalTime.now();
+		
+		// 날짜형의 문자열로 변환하기
+		DateTimeFormatter toDateFormat 
+			= DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter toTimeFormat
+			= DateTimeFormatter.ofPattern("hh:mm:ss");
+		
+		String eDate = local.format(toDateFormat);
+		String eTime = local.format(toTimeFormat);
+		
+		TodoVO tVO = todoList.get(index);
+		
+//		eDate = tVO.getEdate() == null || tVO.getEdate().isEmpty()
+//				? eDate : null;
+//		eTime = tVO.getEtime() == null || tVO.getEtime().isEmpty()
+//				? eTime: null;
+		
+		tVO.setEdate(eDate);
+		tVO.setEtime(eTime);
 		
 	}
 

@@ -36,10 +36,12 @@ public class TodoControllerV12 {
 				printTodo(todoList);
 				
 			} else if(mainMenu == 4) {
-				List<TodoVO> todoList = toService.todoSelectAll();
-				printTodo(todoList);
-				System.out.println(Line.dLine(50));
 				while(true) {
+					
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+					System.out.println(Line.dLine(50));
+					
 					System.out.println("완료할 할일을 선택하세요");
 					Integer num = inService.selectTodo();
 					if(num == null) {
@@ -48,6 +50,7 @@ public class TodoControllerV12 {
 					}
 					if(num == -1) break;
 					toService.compTodo(num);
+					
 				}
 			} // end if
 		} // end while
@@ -70,7 +73,7 @@ public class TodoControllerV12 {
 			
 			String comp = toVO.get(i).getEdate() == null 
 							|| toVO.get(i).getEdate().isBlank()
-							? "진행중" : "완료됨";
+							? "진행중~~" : "~~완료됨";
 			System.out.println(comp);
 		}
 	}
