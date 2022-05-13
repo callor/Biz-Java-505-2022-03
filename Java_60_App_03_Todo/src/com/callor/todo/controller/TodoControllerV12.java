@@ -43,10 +43,27 @@ public class TodoControllerV12 {
 					System.out.println(Line.dLine(60));
 					System.out.println("내용을 변경할 할일을 선택하세요");
 					Integer num = inService.selectTodo();
+					String content = inService.inputContent();
+					if(content.equals("QUIT")) break;
+					toService.update(num, content);
 					
-					// 할일을 입력받고
-					// 입력받은 내용을 선택한 Todo 의 반영하기
-					
+//					TodoVO tVO;
+//					try {
+//						tVO = todoList.get(num - 1);
+//					} catch (Exception e) {
+//						// TODO: handle exception
+//						System.out.println("할일 리스트를 잘못 선택");
+//						System.out.println("리스트 범위 넘어감");
+//						continue;
+//					}
+//					// 할일을 입력받고
+//					System.out.println(Line.dLine(60));
+//					System.out.println("변경할 내용을 입력하세요");
+//					System.out.println(Line.sLine(60));
+//					String content = inService.inputContent();
+//					
+//					// 입력받은 내용을 선택한 Todo 의 반영하기
+//					tVO.setTContent(content);
 					
 				}
 				

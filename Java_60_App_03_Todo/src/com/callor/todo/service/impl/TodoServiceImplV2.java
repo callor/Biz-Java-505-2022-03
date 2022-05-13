@@ -85,9 +85,29 @@ public class TodoServiceImplV2 extends TodoServiceImplV1{
 			e.printStackTrace();
 		}
 		
+	} // end loadTodo
+	
+	@Override
+	public void update(Integer num, String content) {
+		int index = num - 1;
+		TodoVO tVO;
+		try {
+			tVO = todoList.get(index);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("선택한 항목이 리스트에 없습니다");
+			return;
+		}
+		// 할일 변경
+		tVO.setTContent(content);
 		
-		
-		
+		// update 후에 내용을 파일에 자동으로 저장하기
+		try {
+			this.saveTodo(null);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-}
+} // end class
