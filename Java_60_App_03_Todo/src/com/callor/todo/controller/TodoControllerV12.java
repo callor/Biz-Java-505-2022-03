@@ -44,6 +44,9 @@ public class TodoControllerV12 {
 					System.out.println("내용을 변경할 할일을 선택하세요");
 					Integer num = inService.selectTodo();
 					
+					// 할일을 입력받고
+					// 입력받은 내용을 선택한 Todo 의 반영하기
+					
 					
 				}
 				
