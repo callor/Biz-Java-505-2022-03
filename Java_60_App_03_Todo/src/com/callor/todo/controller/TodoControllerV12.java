@@ -35,6 +35,17 @@ public class TodoControllerV12 {
 			} else if(mainMenu == 2) {
 				List<TodoVO> todoList = toService.todoSelectAll();
 				printTodo(todoList);
+			} else if(mainMenu == 3) {
+				while(true) {
+
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+					System.out.println(Line.dLine(60));
+					System.out.println("내용을 변경할 할일을 선택하세요");
+					Integer num = inService.selectTodo();
+					
+					
+				}
 				
 			} else if(mainMenu == 4) {
 				while(true) {
@@ -55,8 +66,13 @@ public class TodoControllerV12 {
 				}
 			} else if(mainMenu == 5) {
 				toService.saveTodo(null);
-			}// end if
+			} else if(mainMenu == 6) {
+				break;
+			}
 		} // end while
+		System.out.println("업무종료 퇴근하자~~~");
+		
+		
 	} // end main
 	
 	private static void printTodo(List<TodoVO> toVO) {

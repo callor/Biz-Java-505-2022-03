@@ -48,13 +48,12 @@ public class TodoServiceImplV2 extends TodoServiceImplV1{
 		int T_EDATE = 3;
 		int T_ETIME = 4;
 		int T_CONTENT = 5;
-		
 		while(scan.hasNext()) {
 			
 			// 파일로 부터 한 라인을 읽어서 line 변수에 담기
 			String line = scan.nextLine();
 			
-			// 읽어들인 line 을 컴마(,) 기준으로 분해(splite)
+			// 읽어들인 line 을 컴마(,) 기준으로 분해(split)
 			// 분해한 결과는 String 형 배열 모양이다
 			String[] todo = line.split(",");
 			// text 파일에 데이터를 저장하면 마지막에 
