@@ -1,7 +1,7 @@
 package com.callor.app.domain;
 
 public class ScoreVO {
-	
+
 	private int stNum;
 	private int intKor;
 	private int intEng;
@@ -34,8 +34,8 @@ public class ScoreVO {
 	public String toString() {
 		return "ScoreVO [stNum=" + stNum + ", intKor=" + intKor + ", intEng=" + intEng + ", intMath=" + intMath + "]";
 	}
-	
-	
-	
+
+
+
 
 }

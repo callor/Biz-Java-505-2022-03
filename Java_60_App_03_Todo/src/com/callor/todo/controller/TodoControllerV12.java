@@ -11,14 +11,14 @@ import com.callor.todo.service.impl.TodoServiceImplV2;
 import com.callor.utils.Line;
 
 public class TodoControllerV12 {
-	
+
 	public static void main(String[] args) throws IOException {
-		
+
 		TodoService toService = new TodoServiceImplV2();
 		InputService inService = new InputServiceImplV2();
-		
+
 		while(true) {
-			
+
 			Integer mainMenu = inService.menu();
 			if(mainMenu == null) {
 				System.out.println("업무선택을 다시 하세요");
@@ -46,7 +46,7 @@ public class TodoControllerV12 {
 					String content = inService.inputContent();
 					if(content.equals("QUIT")) break;
 					toService.update(num, content);
-					
+
 //					TodoVO tVO;
 //					try {
 //						tVO = todoList.get(num - 1);
@@ -61,19 +61,19 @@ public class TodoControllerV12 {
 //					System.out.println("변경할 내용을 입력하세요");
 //					System.out.println(Line.sLine(60));
 //					String content = inService.inputContent();
-//					
+//
 //					// 입력받은 내용을 선택한 Todo 의 반영하기
 //					tVO.setTContent(content);
-					
+
 				}
-				
+
 			} else if(mainMenu == 4) {
 				while(true) {
-					
+
 					List<TodoVO> todoList = toService.todoSelectAll();
 					printTodo(todoList);
 					System.out.println(Line.dLine(50));
-					
+
 					System.out.println("완료할 할일을 선택하세요");
 					Integer num = inService.selectTodo();
 					if(num == null) {
@@ -82,7 +82,7 @@ public class TodoControllerV12 {
 					}
 					if(num == -1) break;
 					toService.compTodo(num);
-					
+
 				}
 			} else if(mainMenu == 5) {
 				toService.saveTodo(null);
@@ -91,10 +91,10 @@ public class TodoControllerV12 {
 			}
 		} // end while
 		System.out.println("업무종료 퇴근하자~~~");
-		
-		
+
+
 	} // end main
-	
+
 	private static void printTodo(List<TodoVO> toVO) {
 		System.out.println(Line.dLine(50));
 		System.out.print("No\t");
@@ -109,8 +109,8 @@ public class TodoControllerV12 {
 			System.out.print(toVO.get(i).getSdate() + "\t");
 			System.out.print(toVO.get(i).getStime() + "\t");
 			System.out.print(toVO.get(i).getTContent() + "\t");
-			
-			String comp = toVO.get(i).getEdate() == null 
+
+			String comp = toVO.get(i).getEdate() == null
 							|| toVO.get(i).getEdate().isBlank()
 							? "진행중~~" : "~~완료됨";
 			System.out.println(comp);

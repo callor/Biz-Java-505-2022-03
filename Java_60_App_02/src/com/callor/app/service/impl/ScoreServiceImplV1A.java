@@ -9,13 +9,13 @@ import com.callor.app.service.ScoreService;
 
 public class ScoreServiceImplV1A implements ScoreService{
 
-	protected final Scanner scan;	
+	protected final Scanner scan;
 	protected final List<ScoreVO> scList;
 	public ScoreServiceImplV1A() {
-		scList = new ArrayList<ScoreVO>();
+		scList = new ArrayList<>();
 		scan = new Scanner(System.in);
 	}
-	
+
 	@Override
 	public void inputScore() {
 
@@ -31,27 +31,27 @@ public class ScoreServiceImplV1A implements ScoreService{
 			System.out.print("국어점수 >>");
 			String strKor = scan.nextLine();
 			Integer intKor = Integer.valueOf(strKor);
-			
+
 			// 영어입력
 			// 수학입력
-			
+
 			// VO 생성
 			ScoreVO scVO = new ScoreVO();
 			// VO 에 Setting
 			scVO.setStName(stName);
 			scVO.setIntKor(intKor);
-			
+
 			// scList.add()
 			scList.add(scVO);
 		} // end while
 		System.out.println("입력이 중단되었습니다");
-		
+
 	}
 
 	@Override
 	public void saveScore() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

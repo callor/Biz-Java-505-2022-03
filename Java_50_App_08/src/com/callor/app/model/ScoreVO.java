@@ -14,7 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 public class ScoreVO {
-	
+
 	protected int stNum;
 	protected int intKor;
 	protected int intEng;

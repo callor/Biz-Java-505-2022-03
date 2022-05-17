@@ -21,7 +21,7 @@ public class Exec75 {
 		}
 		System.out.println("소스의 개수 : " + count);
 	}
-	
+
 	public static Integer prime(Integer num) {
 		for(Integer i = 2 ; i < num ; i++) {
 			if(num % i == 0) {

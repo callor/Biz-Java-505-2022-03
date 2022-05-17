@@ -5,12 +5,12 @@ import java.util.Scanner;
 import com.callor.arrays.utils.Line;
 
 public class StudentServiceV1 {
-	
+
 	// 상속해줄 준비
 	// 클래스 변수의 접근제한자를 protected 로 변경
 	protected String[] strStudents;
 	protected Scanner scan;
-	
+
 	// 기본 생성자
 	// 클래스를 선언하면 자동으로 선언되는 생성자 메서드
 	public StudentServiceV1() {
@@ -26,14 +26,14 @@ public class StudentServiceV1 {
 		 */
 		this(10);
 	}
-	
+
 	// 임의 생성자
 	// 클래스 개발자가 필요에 의해 임의로 선언하는 생성자 메스드
 	public StudentServiceV1(int length) {
 		strStudents = new String[length];
 		scan = new Scanner(System.in);
 	}
-	
+
 	public int inputStudent() {
 		System.out.println(Line.dLine(50));
 		System.out.println("학생이름 입력");
@@ -42,7 +42,7 @@ public class StudentServiceV1 {
 			System.out.printf("%d 번 학생이름 > ", i+1);
 			String strName = scan.nextLine();
 			strStudents[i] = strName;
-			
+
 			this.printStudent();
 			System.out.println(Line.sLine(50));
 		}
@@ -50,18 +50,18 @@ public class StudentServiceV1 {
 		System.out.println(Line.dLine(50));
 		return 0;
 	}
-	
+
 	public void printStudent() {
-		for(int i = 0 ; i < strStudents.length;i++) {
-			boolean bYes = strStudents[i] == null;
+		for (String strStudent : strStudents) {
+			boolean bYes = strStudent == null;
 			if(bYes) {
 				break;
 			}
-			System.out.printf("**  %s\t",strStudents[i]);
+			System.out.printf("**  %s\t",strStudent);
 		}
 		System.out.println();
 	}
-	
-	
+
+
 
 }

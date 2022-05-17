@@ -1,18 +1,18 @@
 package com.callor.classes.exec;
 
 public class String2IntV2 {
-	
-	
+
+
 	public static void main(String[] args) {
-		
+
 		String strNum = "";
 		int intNum = 0;
 		if(strNum.equals("")) {
 			System.out.println("숫자로 변환 할수 없음");
 		} else {
-			intNum = Integer.valueOf(strNum);	
+			intNum = Integer.valueOf(strNum);
 		}
-		
+
 		/*
 		 * 만약 키보드 등을 사용하여 값을 입력할 경우
 		 * 은연중에 space 키를 눌러 white space 가 담기는 경우가
@@ -24,11 +24,11 @@ public class String2IntV2 {
 		if(strNum.equals("   ")) {
 			System.out.println("space 는 숫자로 변환할수 없음");
 		}
-		
-		
-		
-		
+
+
+
+
 	}
-	
+
 
 }

@@ -14,13 +14,13 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 public class ScoreVO {
-	
+
 	// 학생이름, 국어, 영어, 수학 점수 저장
 	private String stName;
 	private int intKor;
 	private int intEng;
 	private int intMath;
-	
+
 	// private int intSum;
 	// private float fAvg;
 
@@ -42,29 +42,30 @@ public class ScoreVO {
 		float avg = (float)sum / 3;
 		return avg;
 	}
-	
+
 	/*
 	 * toString() method 를 재정의 하여
 	 * 한 학생의 성적리스트를 문자열로 return 하겠다
 	 */
+	@Override
 	public String toString() {
-		
+
 		String result = "";
-		
+
 		// 전체 10자리의 공간을 만들고 이름위치를 확보
 		result += String.format("%-10s\t",stName);
-		
+
 		result += String.format("%5d\t",intKor);
 		result += String.format("%5d\t",intEng);
 		result += String.format("%5d\t",intMath);
-		
+
 		result += String.format("%5d\t",getIntSum());
 		result += String.format("%5.2f\n",getAvg());
 
 		return result;
-		
+
 	}
-	
-	
-	
+
+
+
 }

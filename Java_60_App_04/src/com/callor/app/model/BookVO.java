@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class BookVO {
-	
+
 	private String title;
 	private String comp;
 	private String author;

@@ -4,22 +4,22 @@ import com.callor.score.service.ScoreService;
 
 public class ScoreServiceImplV1 implements ScoreService {
 
-	
+
 	public ScoreServiceImplV1() {
-		
+
 	}
-	
-	
+
+
 	@Override
 	public void makeScore() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void printScore() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

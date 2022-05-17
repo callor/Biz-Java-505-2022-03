@@ -8,7 +8,7 @@ public class Method_02A {
 		System.out.println(intSum + intMuti);
 		return;
 	} // end main
-	
+
 	public static int add() {
 		// 여기에서 코드 들여쓰기
 		int intNum1 = (int)(Math.random() * 100) +1;

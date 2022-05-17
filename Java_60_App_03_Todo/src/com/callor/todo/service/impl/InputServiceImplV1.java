@@ -11,7 +11,7 @@ public class InputServiceImplV1 implements InputService{
 	public InputServiceImplV1() {
 		scan = new Scanner(System.in);
 	}
-	
+
 	@Override
 	public Integer menu() {
 
@@ -28,7 +28,7 @@ public class InputServiceImplV1 implements InputService{
 		System.out.print("선택 >> ");
 		String strMenu = scan.nextLine();
 		Integer intMenu = 0;
-		
+
 		try {
 			intMenu = Integer.valueOf(strMenu);
 		} catch (Exception e) {

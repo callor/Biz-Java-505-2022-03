@@ -7,7 +7,7 @@ package com.callor.app.service;
  * method 의 "prototype 만 정의된 상태"
  */
 public interface ScoreService {
-	
+
 	public void inputScore();
 	public void saveScore();
 

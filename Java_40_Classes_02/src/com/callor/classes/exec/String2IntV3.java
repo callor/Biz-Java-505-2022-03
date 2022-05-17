@@ -3,9 +3,9 @@ package com.callor.classes.exec;
 import java.util.Scanner;
 
 public class String2IntV3 {
-	
+
 	public static void main(String[] args) {
-		
+
 		Scanner scan = new Scanner(System.in);
 		System.out.print("정수를 입력하세요 >> ");
 		String strNum = scan.nextLine();
@@ -21,10 +21,10 @@ public class String2IntV3 {
 		} catch (Exception e) {
 			System.out.println("입력한 문자열을 숫자로 변경할수 없음");
 		}
-		
-		
-		
-		
+
+
+
+
 	}
 
 }

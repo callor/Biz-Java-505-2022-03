@@ -6,13 +6,13 @@ import java.util.List;
 import com.callor.app.domain.ScoreVO;
 
 public class ScoreService {
-	
+
 	private List<ScoreVO> scList;
 	public ScoreService() {
 		scList = new ArrayList<>();
 	}
 	public void makeScore() {
-		
+
 		for(int i = 0 ; i < 20 ; i++) {
 			ScoreVO scVO = new ScoreVO();
 			scVO.setStNum(i + 1);
@@ -24,7 +24,7 @@ public class ScoreService {
 			scVO.setIntMath(math);
 			scList.add(scVO);
 		}
-		
+
 	}
 
 	public void printScore() {
@@ -37,5 +37,5 @@ public class ScoreService {
 					);
 		}
 	}
-	
+
 }

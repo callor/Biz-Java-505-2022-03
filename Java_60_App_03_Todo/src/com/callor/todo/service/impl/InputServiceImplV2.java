@@ -17,16 +17,16 @@ public class InputServiceImplV2 extends InputServiceImplV1{
 		String content = scan.nextLine();
 		return content;
 	}
-	
+
 	@Override
 	public Integer selectTodo() {
 		System.out.println(Line.dLine(50));
 		System.out.print("할일선택(QUIT:종료)");
 		String selectNum = scan.nextLine();
 		Integer intNum = 0;
-		
+
 		if(selectNum.equals("QUIT")) return -1;
-		
+
 		try {
 			intNum = Integer.valueOf(selectNum);
 		} catch (Exception e) {

@@ -1,9 +1,9 @@
 package com.callor.hello;
 
 public class GuGuDan {
-	
+
 	public static void main(String[] args) {
-		
+
 		System.out.println("구구단 3단");
 		System.out.println("============================");
 		System.out.println("    3 x 2 = " + 3*2);
@@ -14,8 +14,8 @@ public class GuGuDan {
 		System.out.println("    3 x 7 = " + 3*7);
 		System.out.println("    3 x 8 = " + 3*9);
 		System.out.println("============================");
-		
-		
+
+
 	}
 
 }

@@ -1,11 +1,11 @@
 package com.callor.var;
 
 public class Var_04 {
-	
+
 	public static void main(String[] args) {
-		
+
 		int intSum = 0;
-		
+
 		/*
 		 * 할당명령문(변수에 값을 할당, 저장, 대입하는 명령문)에
 		 * 연산식이 따라오면
@@ -14,7 +14,7 @@ public class Var_04 {
 		 */
 		intSum = 55 + 33;
 		System.out.println(intSum);
-		
+
 		int intNum1 = 77;
 		int intNum2 = 99;
 		/*
@@ -26,9 +26,9 @@ public class Var_04 {
 		 * 		변수 intSum에 저장하기
 		 */
 		intSum = intNum1 + intNum2;
-		
+
 		System.out.println(intSum);
-		
+
 	}
 
 }

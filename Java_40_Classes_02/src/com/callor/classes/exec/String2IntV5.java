@@ -20,18 +20,18 @@ public class String2IntV5 {
 			if(strNum.equals("END")) {
 				break;
 			}
-			
+
 			int intNum = 0;
 			try {
 				intNum = Integer.valueOf(strNum);
 				boolean bEven = intNum % 2 == 0;
 				if(bEven) {
-					System.out.println(intNum + " 는 짝수");	
+					System.out.println(intNum + " 는 짝수");
 				}
 			} catch (Exception e) {
 				System.out.println(
-							"입력한 \"" 
-							+ strNum 
+							"입력한 \""
+							+ strNum
 							+ "\" 는 숫자로 변경불가!!");
 			}
 		} // end while

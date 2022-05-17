@@ -6,13 +6,13 @@ import java.util.List;
 import com.callor.app.model.ScoreVO2;
 
 public class ObjectEx4 {
-	
+
 	public static void main(String[] args) {
 		List<ScoreVO2> scList = new ArrayList<>();
 		makeScore(scList, 10);
 		printScore(scList);
 	}
-	
+
 	private static void makeScore(List<ScoreVO2> list, int size) {
 		for(int i = 0 ; i < size ; i++) {
 			/*
@@ -33,7 +33,7 @@ public class ObjectEx4 {
 	private static int getScore(int start, int end) {
 		return (int)(Math.random() * start) + end;
 	}
-	
+
 	private static void printScore(List<ScoreVO2> list) {
 		System.out.println("=".repeat(50));
 		System.out.println("학번\t국어\t영어\t수학\t총점\t평균");

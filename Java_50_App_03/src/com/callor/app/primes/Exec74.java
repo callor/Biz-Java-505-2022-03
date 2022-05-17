@@ -1,7 +1,7 @@
 package com.callor.app.primes;
 
 public class Exec74 {
-	
+
 	public static void main(String[] args) {
 		int[] nums = new int[100];
 		for(int i = 0 ; i < nums.length ; i++)  {
@@ -11,12 +11,12 @@ public class Exec74 {
 		for(int num : nums) {
 			count += prime( num );
 		}
-		
+
 		count = 0;
-		for(int i = 0 ; i < nums.length ; i++) {
-			count += prime( nums[i] );
+		for (int num : nums) {
+			count += prime( num );
 		}
-		
+
 		System.out.println("소수의 개수 :" + count);
 	}
 

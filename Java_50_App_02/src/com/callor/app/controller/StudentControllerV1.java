@@ -14,16 +14,16 @@ public class StudentControllerV1 {
 	private final MenuController menu;
 	private final StudentService stService;
 	private final List<StudentVO> stList;
-	
+
 	public StudentControllerV1() {
 		scan = new Scanner(System.in);
 		menu = new MenuController();
-		
+
 		String stFileName = "src/com/callor/app/data/student.txt";
 		stList = new ArrayList<>();
 		stService = new StudentServiceImplV1(stList,stFileName);
 	}
-	
+
 	public Integer selectMenu() {
 		while(true) {
 			menu.viewStMenu();
@@ -48,7 +48,7 @@ public class StudentControllerV1 {
 				if(stList.size() < 1) {
 					System.out.println("학생정보 파일을 먼저 로딩하세요");
 					continue;
-				} 
+				}
 				System.out.println(Line.dLine(50));
 				System.out.println("학생 정보 리스트");
 				System.out.println(Line.sLine(50));
@@ -63,8 +63,8 @@ public class StudentControllerV1 {
 					System.out.println(vo.getStAddr());
 				}
 				System.out.println(Line.dLine(50));
-				
-				
+
+
 			} else if(intKey == 3) {
 				System.out.println("학번 검색하기");
 			} else if(intKey == 4) {
@@ -74,7 +74,7 @@ public class StudentControllerV1 {
 			} // end if
 		} // end while
 	} // end selectMenu
-	
- 
+
+
 
 }

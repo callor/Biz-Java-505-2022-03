@@ -2,9 +2,9 @@ package com.callor.app.dbconfig;
 
 public class DBContract {
 
-	public static final String ST_SELECT = 
+	public static final String ST_SELECT =
 			" SELECT * FROM tbl_student ORDER BY st_num ";
-	
+
 	public static class ST_COL {
 		public static final String ST_NUM = "ST_NUM";
 		public static final String ST_NAME = "ST_NAME";

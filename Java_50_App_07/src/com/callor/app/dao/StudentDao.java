@@ -10,27 +10,25 @@ import java.util.List;
 import com.callor.app.dbconfig.DBConnection;
 import com.callor.app.model.StudentVO;
 
-import oracle.jdbc.driver.json.tree.JsonpPrimitive.JsonpStringNumberImpl;
-
 public class StudentDao {
-	
+
 	private final Connection dbConn;
 	public StudentDao() {
 		dbConn = DBConnection.getDBConnection();
 	}
-	
+
 	public List<StudentVO> selectAll() throws SQLException {
-		
+
 		String sql = " SELECT * FROM tbl_student ";
 		PreparedStatement pStr = null;
-		
+
 		pStr = dbConn.prepareStatement(sql);
 		ResultSet rSet = pStr.executeQuery();
-		
+
 		List<StudentVO> stList = new ArrayList<>();
-		
+
 		while(rSet.next()) {
-			
+
 			/*
 			 * private String stNum;
 			 * private String stName;
@@ -48,7 +46,7 @@ public class StudentDao {
 					rSet.getString("st_dept"),
 					rSet.getInt("st_grade")
 				);
-			
+
 			// 기본생성자를 호출하여 비어있는 vo 를 만들고
 			// setter() 메서드를 사용하여 변수에 값 setting 하기
 			StudentVO stVO1 = new StudentVO();
@@ -58,19 +56,19 @@ public class StudentDao {
 			stVO1.setStAddr(rSet.getString("st_addr"));
 			stVO1.setStDept(rSet.getString("st_dept"));
 			stVO1.setStGrade(rSet.getInt("st_grade"));
-			
+
 			StudentVO stVO2 = StudentVO.builder()
 								.stNum(rSet.getString("st_num"))
 								.stName(rSet.getString("st_name"))
 								.stTel(rSet.getString("st_tel"))
 								.build();
-			
+
 			stList.add(stVO2);
-			
+
 		}
 		return stList;
-		
+
 	}
-	
+
 
 }

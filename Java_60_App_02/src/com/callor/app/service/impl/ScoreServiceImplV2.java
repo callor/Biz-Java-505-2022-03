@@ -8,7 +8,7 @@ public class ScoreServiceImplV2  extends ScoreServiceImplV1A {
 		// 상속받은 ScoreServiceImplV1A 클래스의 기본 생성자 호출
 		super();
 	}
-	
+
 	@Override
 	public void inputScore() {
 		while(true) {
@@ -53,9 +53,9 @@ public class ScoreServiceImplV2  extends ScoreServiceImplV1A {
 			 * 3. VO 클래스에 정의된 변수이름이 method 역할 수행
 			 * 4. 변수이름에 해당하는 method 에 값 전달하여 데이터 저장
 			 * 5. build() method 호출하여 마감
-			 * 
+			 *
 			 * Build 패턴을 사용하는 이유
-			 * 1. VO 객체를 생성하고 setter method 를 
+			 * 1. VO 객체를 생성하고 setter method 를
 			 * 	 사용하여 데이터를 저장하는 번거로움을 해결
 			 * 2. 필드생성자를 사용할때 모든 변수의 값을 준비해야하는
 			 * 	 번거로움을 해결
@@ -70,18 +70,18 @@ public class ScoreServiceImplV2  extends ScoreServiceImplV1A {
 							.build();
 			scList.add(scVO);
 		} // end while
-		
+
 		for(ScoreVO scVO : scList) {
 			System.out.println(scVO.toString());
 		}
-		
+
 	}
 	/*
 	 * 정수 점수를 정확히 입력했으면 점수를 return 하고
 	 * 만약 exception 이 발생하면 null return
 	 * 종료(QUIT) 입력하면 -1 을 return
 	 */
-	
+
 	private Integer getScore(String title) {
 		System.out.printf("%s 점수입력(QUIT:종료) >>",title);
 		String score = scan.nextLine();
@@ -90,15 +90,15 @@ public class ScoreServiceImplV2  extends ScoreServiceImplV1A {
 		}
 		Integer intScore = 0;
 		try {
-			intScore = Integer.valueOf(score);	
+			intScore = Integer.valueOf(score);
 		} catch (Exception e) {
 			System.out.printf("%s 점수는 정수만 가능\n",title);
 			return null;
 		}
 		return intScore;
 	}
-	
-	
-	
-	
+
+
+
+
 }

@@ -1,7 +1,7 @@
 package com.callor.app.exec;
 
 public class Exec01 {
-	
+
 	public static void main(String[] args) {
 		int num1 = 10;
 		int num2 = 20;

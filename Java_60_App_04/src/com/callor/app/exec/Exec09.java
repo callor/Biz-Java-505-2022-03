@@ -6,13 +6,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Exec09 {
-	
+
 	public static void main(String[] args) {
 		String fileName = "src/com/callor/app/exec/data.txt";
-		
+
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
-		
+
 		try {
 			fileReader = new FileReader(fileName);
 			buffer = new BufferedReader(fileReader);
@@ -32,7 +32,7 @@ public class Exec09 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

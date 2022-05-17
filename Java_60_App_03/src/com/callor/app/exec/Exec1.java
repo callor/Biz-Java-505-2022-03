@@ -7,7 +7,7 @@ package com.callor.app.exec;
  * 이 과정을 10번 반복
  */
 public class Exec1 {
-	
+
 	public static void main(String[] args) {
 
 		for(int i = 0 ; i < 10 ; i++) {
@@ -18,7 +18,7 @@ public class Exec1 {
 				System.out.println(num + "는 홀수");
 			}
 		}
-		
+
 	}
 
 }

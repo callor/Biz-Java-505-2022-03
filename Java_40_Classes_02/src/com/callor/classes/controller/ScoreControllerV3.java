@@ -3,9 +3,9 @@ package com.callor.classes.controller;
 import com.callor.classes.service.ScoreServiceV3;
 
 public class ScoreControllerV3 {
-	
+
 	public static void main(String[] args) {
-		
+
 		ScoreServiceV3 scServiceV3 = new ScoreServiceV3();
 		scServiceV3 = new ScoreServiceV3(20);
 
@@ -20,11 +20,11 @@ public class ScoreControllerV3 {
 							"성춘향",
 							"임꺽정",
 							"징보고"};
-		
+
 		scServiceV3 = new ScoreServiceV3(strNames);
-		
-		
-		
+
+
+
 	}
 
 }

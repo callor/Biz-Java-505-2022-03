@@ -9,12 +9,12 @@ import com.callor.todo.service.impl.InputServiceImplV1;
 import com.callor.todo.service.impl.TodoServiceImplV1;
 
 public class TodoControllerV11 {
-	
+
 	public static void main(String[] args) {
-		
+
 		TodoService toService = new TodoServiceImplV1();
 		InputService inService = new InputServiceImplV1();
-		
+
 		while(true) {
 			Integer menu = inService.menu();
 			if(menu == null) {

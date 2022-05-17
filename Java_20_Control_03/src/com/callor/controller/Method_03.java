@@ -7,7 +7,7 @@ package com.callor.controller;
 import com.callor.service.ServiceV1;
 
 public class Method_03 {
-	
+
 	public static void main(String[] args) {
 		// ServiceV1 클래스에 선언된 add() 를 호출하여
 		// return 된 값을 intSum 변수에 저장

@@ -11,16 +11,16 @@ public class ScoreServiceImplV3 extends ScoreServiceimplV2{
 
 	public ScoreServiceImplV3() {
 		/*
-		 * super() method 
+		 * super() method
 		 * 상속받은(V2) 클래스의 기본생성자를 호출하여
 		 * protected 로 선언된 변수들을 초기화 하기
 		 */
 		super();
 	}
-	
+
 	@Override
 	public void printScore() {
-		
+
 		System.out.println(Line.dLine(lineLength));
 		System.out.println("한국고교 성적일람표");
 		System.out.println(Line.sLine(lineLength));
@@ -29,12 +29,12 @@ public class ScoreServiceImplV3 extends ScoreServiceimplV2{
 		}
 		System.out.println();
 		System.out.println(Line.sLine(lineLength));
-		
+
 		int korTotal = 0;
 		int engTotal = 0;
 		int mathTotal = 0;
 		int sumTotal = 0;
-		
+
 		for(ScoreVO scVO : scList) {
 			System.out.print(scVO.toString());
 			korTotal += scVO.getIntKor();
@@ -48,6 +48,6 @@ public class ScoreServiceImplV3 extends ScoreServiceimplV2{
 		System.out.printf("%5d\t", mathTotal);
 		System.out.printf("%5d\t", sumTotal);
 		System.out.println(Line.dLine(lineLength));
-		
+
 	}
 }

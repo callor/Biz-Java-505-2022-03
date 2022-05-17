@@ -7,13 +7,13 @@ public class ScoreServiceImplV2 implements ScoreService {
 	@Override
 	public void makeScore() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void printScore() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

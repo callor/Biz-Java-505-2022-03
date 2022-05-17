@@ -10,9 +10,9 @@ public class Operator_01 {
 		 * 명령문의 시작은 key word와 변수만 올수 있다
 		 * key word 로 시작하는 명령문은 어떤 기능을 수행하는 경우이고
 		 * 변수로 시작하는 경우는 연산자가 따라온다
-		 * 변수의 바로 다음에 오는 연산자 
-		 * 		대입연산자(=), 단항연산자(++,--), 
-		 * 		복합연산자( +=, *=, -= /= %=), 
+		 * 변수의 바로 다음에 오는 연산자
+		 * 		대입연산자(=), 단항연산자(++,--),
+		 * 		복합연산자( +=, *=, -= /= %=),
 		 * 		삼항연산자 둥이 있다
 		 */
 		int intNum1 = 10;
@@ -20,7 +20,7 @@ public class Operator_01 {
 
 		// 대입연산자 : 리터럴 100을 변수 intNum2에 대입하라
 		intNum2 = 100;
-		
+
 		System.out.println(intNum1);
 		System.out.println(intNum2);
 
@@ -52,13 +52,13 @@ public class Operator_01 {
 		 * 나. intNum1 다음에 또 대입연산자가 온다
 		 * 다. 다시 오른쪽을 바라본다
 		 * 라. intNum1 + 10 연산을 수행한다.
-		 * 
+		 *
 		 * 2. 라의 결과를 intNum1 에 대입(저장) 한다.
 		 * 3. intNum1 에 저장된 값을 읽어서 intNum2에 저장한다
 		 */
 		intNum2 = intNum1 = intNum1 + 10;
 		System.out.println(intNum2);
-		
+
 		// 대입연산식(intNum1 = intNum2 + 10) 이
 		// 다른 명령문 내에 포함되는 경우
 		// 대입연산식을 따로 떼어서 바라보자
@@ -68,9 +68,9 @@ public class Operator_01 {
 		// 4. intNum1 의 값은 그대로 유지한다.
 		// 5. 이후의 코드에서 intNum1 값을 사용할 수 있다
 		System.out.println(intNum1 = intNum2 + 10);
-		
+
 		System.out.println(intNum1 = intNum2 += 30);
-		
+
 
 	}
 

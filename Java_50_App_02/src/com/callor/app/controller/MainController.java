@@ -5,7 +5,7 @@ public class MainController {
 	public static void main(String[] args) {
 		MenuController menu = new MenuController();
 		StudentControllerV1 stController = new StudentControllerV1();
-		
+
 		while (true) {
 			menu.viewMainMenu();
 			Integer select = menu.selectMenu();
@@ -17,9 +17,9 @@ public class MainController {
 				stController.selectMenu();
 			} else if (select == 2) {
 				while(true) {
-					menu.viewScMenu();	
+					menu.viewScMenu();
 				}
-				
+
 			} else if(select == -1) {
 				break;
 			} else {

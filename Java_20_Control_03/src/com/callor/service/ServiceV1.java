@@ -17,7 +17,7 @@ public class ServiceV1 {
 		int intNum2 = (int)(Math.random() * 100) + 1;
 		return intNum1 * intNum2;
 	}
-	
-	
+
+
 
 }

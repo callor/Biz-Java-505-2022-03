@@ -8,7 +8,7 @@ public class ScoreV2VO extends Object {
 	private int intMath;
 	private int intSum;
 	private float fAvg;
-	
+
 	public String getStName() {
 		return stName;
 	}
@@ -33,7 +33,7 @@ public class ScoreV2VO extends Object {
 	public void setIntMath(int intMath) {
 		this.intMath = intMath;
 	}
-	
+
 	public int getIntSum() {
 		intSum = intKor;
 		intSum += intEng;
@@ -41,18 +41,18 @@ public class ScoreV2VO extends Object {
 		return intSum;
 	}
 	public float getfAvg() {
-		fAvg = (float)getIntSum() / 3.0f; 
+		fAvg = getIntSum() / 3.0f;
 		return fAvg;
 	}
 	@Override
 	public String toString() {
 		return "ScoreV2VO ["
-				+ "stName=" + stName 
-				+ ", intKor=" + intKor 
-				+ ", intEng=" + intEng 
+				+ "stName=" + stName
+				+ ", intKor=" + intKor
+				+ ", intEng=" + intEng
 				+ ", intMath=" + intMath
 				+ ", intSum=" + getIntSum()
 				+ ", fAvg=" + getfAvg() + "]";
 	}
-	
+
 }

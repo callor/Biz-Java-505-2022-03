@@ -1,7 +1,7 @@
 package com.callor.app.primes;
 
 public class Exec71 {
-	
+
 	public static void main(String[] args) {
 		int[] nums = new int[100];
 		for(int i = 0 ; i < nums.length ; i++) {
@@ -25,8 +25,8 @@ public class Exec71 {
 			}
 		}
 		System.out.println("소수의 개수 : " + count);
-		
-		
+
+
 	}
 
 }

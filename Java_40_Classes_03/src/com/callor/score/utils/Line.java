@@ -1,7 +1,7 @@
 package com.callor.score.utils;
 
 public class Line {
-	
+
 	public static String dLine(int length) {
 		return "=".repeat(length);
 	}
@@ -9,5 +9,5 @@ public class Line {
 		return "-".repeat(length);
 	}
 
-	
+
 }

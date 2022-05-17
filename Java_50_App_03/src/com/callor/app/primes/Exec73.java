@@ -11,7 +11,7 @@ public class Exec73 {
 			nums.add(num);
 		}
 		int count = 0;
-		
+
 		// Integer num = nums.get(0)
 		// Integer num = nums.get(1)
 		// Integer num = nums.get(2)

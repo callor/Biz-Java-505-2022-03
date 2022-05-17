@@ -8,7 +8,7 @@ package com.callor.var;
  *
  */
 public class Var_01 {
-	
+
 	/*
 	 * 1. 변수명은 키워드 등으로 사용할수 없다
 	 * 2. 같은 변수명은 한 블럭( {} ) 내부에서 두번이상
@@ -20,15 +20,15 @@ public class Var_01 {
 		// 변수 선언과 0으로 초기화(clear라고 표현)
 		int intNum1 = 0;
 		int intNum2 = 0;
-		
+
 		intNum1 = 55;
 		intNum2 = 33;
-		
+
 		System.out.println(intNum1 + intNum2);
 		System.out.println(intNum1 * intNum2);
 		System.out.println(intNum1 - intNum2);
 		System.out.println(intNum1 / intNum2);
-		
+
 	}
 
 }

@@ -6,13 +6,13 @@ import java.util.List;
 import com.callor.app.model.ScoreVO;
 
 public class ObjectEx3 {
-	
+
 	public static void main(String[] args) {
 		List<ScoreVO> scList = new ArrayList<>();
 		makeScore(scList, 10);
 		printScore(scList);
 	}
-	
+
 	private static void makeScore(List<ScoreVO> list, int size) {
 		for(int i = 0 ; i < size ; i++) {
 			ScoreVO scVO = new ScoreVO();
@@ -23,11 +23,11 @@ public class ObjectEx3 {
 			list.add(scVO);
 		}
 	}
-	
+
 	private static int getScore(int start, int end) {
 		return (int)(Math.random() * start) + end;
 	}
-	
+
 	private static void printScore(List<ScoreVO> list) {
 		int size = list.size();
 		System.out.println("=".repeat(50));
@@ -42,8 +42,8 @@ public class ObjectEx3 {
 		}
 		System.out.println("=".repeat(50));
 	}
-	
-	
-	
+
+
+
 
 }

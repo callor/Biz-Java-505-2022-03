@@ -8,22 +8,22 @@ import com.callo.app.service.ScoreService;
 import com.callo.app.utils.Line;
 
 public class ScoreServiceimplV2 implements ScoreService{
-	
+
 	// protected 는 상속해주기 위해 설계된 클래스에서
 	// 상속받은 클래스와 변수를 공유하기 위한 방법
 	// 기본속성은 private 과 같다
 	protected int stCount;
 	protected final List<ScoreVO> scList;
-	
+
 	protected final int lineLength = 50;
 	protected final String[] subs ;
-	
+
 	public ScoreServiceimplV2() {
 		scList = new ArrayList<>();
 		stCount = 20;
 		subs = new String[]{"학번","국어","영어","수학","총점","평균"};
 	}
-	
+
 	private int getScore() {
 		int score = (int)(Math.random() * 50) + 51;
 		return score;
@@ -37,7 +37,7 @@ public class ScoreServiceimplV2 implements ScoreService{
 			scVO.setIntKor(getScore());
 			scVO.setIntMath(getScore());
 			scVO.setIntEng(getScore());
-			scList.add(scVO);		
+			scList.add(scVO);
 		}
 	}
 

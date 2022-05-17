@@ -1,7 +1,7 @@
 package com.callor.utils;
 
 public class Line {
-	
+
 	public static String dLine = "=".repeat(100);
 	public static String sLine = "-".repeat(100);
 

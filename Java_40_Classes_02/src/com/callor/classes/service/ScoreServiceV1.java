@@ -5,25 +5,25 @@ import java.util.Scanner;
 import com.callor.classes.utils.Line;
 
 public class ScoreServiceV1 {
-	
+
 	protected String[] student;
 	protected int[] intKor;
 	protected Scanner scan;
 	protected int lineLength;
-	
+
 	public ScoreServiceV1() {
 		this(10);
 	}
-	
+
 	public ScoreServiceV1(int length) {
 		student = new String[length];
 		intKor = new int[length];
 		scan = new Scanner(System.in);
 		lineLength = 50;
 	}
-	
+
 	public int input() {
-		
+
 		System.out.println(Line.dLine(lineLength));
 		System.out.println("대한 고교 성적처리 V2");
 		System.out.println(Line.sLine(lineLength));
@@ -47,7 +47,7 @@ public class ScoreServiceV1 {
 				intKor[index] = intScore;
 				index++;
 			} catch (Exception e) {
-				System.out.println("입력한 값 \"" 
+				System.out.println("입력한 값 \""
 						+ strKor + "\"는 정수로 변경 불가~~");
 				System.out.println("점수는 정수로만 입력하세요");
 			}
@@ -63,7 +63,7 @@ public class ScoreServiceV1 {
 			return 0;
 		}
 	}
-	
-	
+
+
 
 }

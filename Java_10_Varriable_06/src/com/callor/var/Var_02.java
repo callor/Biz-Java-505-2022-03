@@ -1,12 +1,12 @@
 package com.callor.var;
 
 public class Var_02 {
-	
+
 	public static void main(String[] args) {
-		
+
 		int intNum1 = (int)(Math.random() * 10) + 1;
 		int intNum2 = (int)(Math.random() * 10) + 1;
-		
+
 		/*
 		 * boolean type 변수 선언하고
 		 * intNum1 과 intNum2 의 값을 비교( >= )하여
@@ -14,7 +14,7 @@ public class Var_02 {
 		 */
 		boolean bYes = intNum1 >= intNum2;
 		System.out.println(bYes);
-		
+
 		/*
 		 * 산술연산과 비교연산을 함께 포함하는 연산식(expression)
 		 * 1. intNum1 % 2 가 연산되고
@@ -24,7 +24,7 @@ public class Var_02 {
 		 * intNum1 이 짝수이면 true, 아니면 false
 		 */
 		boolean bEven = (intNum1 % 2) == 0;
-		
+
 		/*
 		 * intNum1 에 저장된 값이 3의 배수인가?
 		 * drainge3 에 담긴 값이 true 이면 당연히 3의 배수이다
@@ -34,7 +34,7 @@ public class Var_02 {
 		 */
 		boolean drainge3 = (intNum1 % 3) == 0;
 		System.out.println(drainge3);
-		
+
 	}
 
 }

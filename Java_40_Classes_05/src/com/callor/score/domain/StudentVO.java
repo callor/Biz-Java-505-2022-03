@@ -39,12 +39,12 @@ public class StudentVO {
 	public void setStAddr(String stAddr) {
 		this.stAddr = stAddr;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "StudentVO [stNum=" + stNum + ", stName=" + stName + ", stGrade=" + stGrade + ", stDept=" + stDept
 				+ ", stAddr=" + stAddr + "]";
 	}
-	
+
 
 }

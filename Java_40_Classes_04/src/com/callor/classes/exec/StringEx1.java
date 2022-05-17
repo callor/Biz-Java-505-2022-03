@@ -1,40 +1,40 @@
 package com.callor.classes.exec;
 
 public class StringEx1 {
-	
+
 	public static void main(String[] args) {
-		
+
 		String strNation = "대한민국만세";
 		System.out.println(strNation);
-		
+
 		String strName = new String("홍길동");
 		System.out.println(strName);
-		
+
 		String strNo1 = strNation.substring(3);
 		System.out.println(strNo1);
 		String strNo2 = strNation.substring(3, 5);
 		System.out.println(strNo2);
-		
+
 		for(int i = 0 ; i < strNation.length() ; i++) {
 			System.out.println(strNation.substring(i));
 		}
-		
+
 		for(int i = 0 ; i < strNation.length() ; i++) {
 			System.out.println(strNation.substring(i,i+1));
 		}
-		
+
 		System.out.println(strNation);
 		for(int i = 0 ; i < strNation.length() ; i++) {
 			System.out.print(strNation.substring(i,i+1));
 		}
 		System.out.println();
-		
+
 		int[] intNum = new int[10];
-		for(int i = 0 ;  i < intNum.length ; i++) {
-			System.out.print(intNum[i]);
+		for (int element : intNum) {
+			System.out.print(element);
 		}
 		System.out.println();
-		
+
 		String str1 = "0123456789";
 		/*
 		 * str1.length() 메서드는 문자열의 길이를 계산하는 method 이다
@@ -61,11 +61,11 @@ public class StringEx1 {
 		}
 		System.out.println();
 
-		
-		
-		
 
-	
+
+
+
+
 	}
 
 }

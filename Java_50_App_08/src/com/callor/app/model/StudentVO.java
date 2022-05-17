@@ -14,7 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 public class StudentVO {
-	
+
 	private String stNum;
 	private String stName;
 	private String stDept;

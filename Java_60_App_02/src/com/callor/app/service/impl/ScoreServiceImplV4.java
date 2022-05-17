@@ -7,18 +7,18 @@ import java.io.PrintWriter;
 import com.callor.app.model.ScoreVO;
 
 public class ScoreServiceImplV4 extends ScoreServiceImplV3 {
-	
+
 	public ScoreServiceImplV4() {
 		super();
 	}
-	
+
 	@Override
 
 	public void saveScore() {
-		
+
 		FileWriter fileWriter = null;
 		PrintWriter print = null;
-		
+
 		try {
 			fileWriter = new FileWriter(saveFileName);
 			print = new PrintWriter(fileWriter);
@@ -35,7 +35,7 @@ public class ScoreServiceImplV4 extends ScoreServiceImplV3 {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
 
 }

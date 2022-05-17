@@ -19,11 +19,11 @@ public class StudentServiceImplV1 implements StudentService {
 			this.stList[i] = new StudentVO();
 		}
 	}
-	
-	
+
+
 	@Override
 	public void loadStudent() {
-		
+
 		InputStream is = null;
 		try {
 			is = new FileInputStream(this.stFile);
@@ -49,32 +49,32 @@ public class StudentServiceImplV1 implements StudentService {
 			String stLine = scan.nextLine();
 			System.out.println(stLine);
 			String[] stInfos = stLine.split(":");
-			
+
 			System.out.println("학번:" + stInfos[0]);
 			System.out.println("이름:" + stInfos[1]);
 			System.out.println("학년:" + stInfos[2]);
 			System.out.println("학과:" + stInfos[4]);
 			System.out.println("주소:" + stInfos[5]);
-			
+
 			StudentVO stVO = new StudentVO();
 			stVO.setStNum(stInfos[0]);
 			stVO.setStName(stInfos[1]);
 			stVO.setStGrade(stInfos[2]);
 			stVO.setStDept(stInfos[4]);
 			stVO.setStAddr(stInfos[5]);
-			
+
 			stList[index++] = stVO;
-			
+
 		} // end while 여기를 지나면 stList 에 모든 데이터가 담겨 있을 것이다
 		this.printStudents();
-		
+
 	} // end loadStudent
-	
+
 	// V1 에서 stList 에 담긴 데이터들을 확인하기 위하여
 	// 내부용으로 만든 method
 	private void printStudents() {
-		for(int i = 0 ; i < stList.length ; i++) {
-			System.out.println(stList[i].toString());
+		for (StudentVO element : stList) {
+			System.out.println(element.toString());
 		}
 		for(StudentVO vo : stList) {
 			System.out.println(vo.toString());

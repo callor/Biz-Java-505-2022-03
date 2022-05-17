@@ -7,7 +7,7 @@ import com.callor.todo.service.TodoService;
 import com.callor.todo.service.impl.TodoServiceImplV2;
 
 public class TodoControllerV2 {
-	
+
 	public static void main(String[] args) {
 		TodoService toService = new TodoServiceImplV2();
 		List<TodoVO> todoList = toService.todoSelectAll();

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class HelloClass {
 	public static void main(String[] args) {
-		
+
 		// Scanner 클래스를 사용하여 scan 객체생성
 		Scanner scan = new Scanner(System.in);
 		// Random 클래스를 사용하여 random 객체생성
@@ -18,7 +18,7 @@ public class HelloClass {
 		InputStream is = System.in;
 		// System.out 객체를 사용하여 os 객체 생성
 		OutputStream os = System.out;
-		
+
 	}
 
 }

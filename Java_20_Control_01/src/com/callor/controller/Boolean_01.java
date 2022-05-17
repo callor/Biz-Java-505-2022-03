@@ -1,12 +1,12 @@
 package com.callor.controller;
 
 public class Boolean_01 {
-	
+
 	public static void main(String[] args) {
-		
+
 		int intNum1 = (int)(Math.random() * 1000) + 1;
 		int intNum2 = (int)(Math.random() * 1000) + 1;
-		
+
 		boolean bEq = intNum1 == intNum2;
 		boolean bNotEq = intNum1 != intNum2;
 		boolean bGT = intNum1 > intNum2; // greater than
@@ -19,7 +19,7 @@ public class Boolean_01 {
 		 * 서로 다른지 비교를 한다 당연히 같지않으면 bNotEq 가 true가
 		 * 될 것이고
 		 * 이후의 else if 명령문은 전혀 실행하지 않는 코드가 된다
-		 * 
+		 *
 		 */
 		if(bEq) {
 			System.out.printf("\t%d 와 %d 는 같다\n",
@@ -33,9 +33,9 @@ public class Boolean_01 {
 			System.out.printf("\t%d 가 %d 보다 작다\n",
 					intNum1, intNum2);
 		}
-		
-		
-		
+
+
+
 	}
 
 }

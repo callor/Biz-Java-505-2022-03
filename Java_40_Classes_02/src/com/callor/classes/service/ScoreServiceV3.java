@@ -1,10 +1,10 @@
 package com.callor.classes.service;
 
 public class ScoreServiceV3 {
-	
+
 	protected String[] students;
 	protected int[] intKor;
-	
+
 	public ScoreServiceV3() {
 		this(10);
 	}
@@ -16,7 +16,7 @@ public class ScoreServiceV3 {
 		this.students = students;
 		this.intKor = new int[this.students.length];
 	}
-	
-	
+
+
 
 }

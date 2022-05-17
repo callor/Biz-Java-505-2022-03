@@ -6,11 +6,11 @@ import java.util.List;
 import com.callor.app.model.BookVO;
 
 public class eXEC04 {
-	
+
 	public static void main(String[] args) {
-		
+
 		List<BookVO> bookList= new ArrayList<>();
-		
+
 		// 1개의 bookVO 를 만들고
 		BookVO bookVO = new BookVO();
 		for(int i = 0 ; i < 10; i++) {
@@ -22,7 +22,7 @@ public class eXEC04 {
 			bookList.add(bookVO);
 		}
 		for(BookVO vo : bookList) {
-			System.out.println(vo.toString());	
+			System.out.println(vo.toString());
 		}
 
 		bookList = new ArrayList<>();
@@ -36,16 +36,16 @@ public class eXEC04 {
 			bookList.add(bookVO1);
 		}
 		for(BookVO vo : bookList) {
-			System.out.println(vo.toString());	
+			System.out.println(vo.toString());
 		}
 
 
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 	}
 
 }
