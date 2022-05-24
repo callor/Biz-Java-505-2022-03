@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.callor.app.model.BookVO;
 
-public class BookServiceInplV1 implements BookService{
+public class BookServiceImplV1 implements BookService{
 
 	/*
 	 * protected 제한자
